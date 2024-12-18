@@ -2,6 +2,8 @@ import React from "react";
 import DashboardCard from "../components/dashboardCard";
 import Linechart from "../components/linechart";
 import LatestOrders from "../components/latestOrders";
+import Odres from "../components/Odres";
+import UserNav from "../components/userNav";
 
 const Overview = () => {
   const data = [
@@ -28,12 +30,14 @@ const Overview = () => {
   ];
   return (
     <div className=' w-full px-[80px] grid grid-cols-4 gap-[20px] grid-rows-3'>
+      <UserNav />
       <DashboardCard data={data} />
       <div className='col-span-3 flex flex-col  justify-center border-2 rounded-2xl p-[24px]'>
         <h1>Sales</h1>
         <Linechart />
       </div>
       <LatestOrders />
+      <Odres />
     </div>
   );
 };
